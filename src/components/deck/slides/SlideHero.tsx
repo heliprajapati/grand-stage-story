@@ -20,9 +20,9 @@ export default function SlideHero({ onExplore }: { onExplore?: () => void }) {
           </div>
 
           <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tight animate-fade-up">
-            Grand Stage
+            Dubai Mall
             <br />
-            <span className="italic text-gold">Story.</span>
+            <span className="italic text-gold">Grand Stage Story.</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed font-body animate-fade-up stagger-2">
