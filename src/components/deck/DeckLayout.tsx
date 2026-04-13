@@ -31,7 +31,7 @@ export default function DeckLayout() {
       />
 
       <SlideContainer currentSlide={currentSlide} direction={direction} presentMode={presentMode}>
-        <SlideHero />
+        <SlideHero onExplore={next} />
         <SlideOpportunity active={currentSlide === 1} />
         <SlideExperiences active={currentSlide === 2} />
         <SlideRetail active={currentSlide === 3} />

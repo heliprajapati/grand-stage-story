@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
-export default function SlideHero() {
+export default function SlideHero({ onExplore }: { onExplore?: () => void }) {
   return (
     <div className="relative w-full h-full flex items-center">
       <div className="absolute inset-0">
@@ -30,13 +30,13 @@ export default function SlideHero() {
           </p>
 
           <div className="animate-fade-up stagger-3">
-            <a
-              href="#"
+            <button
+              onClick={onExplore}
               className="group inline-flex items-center gap-3 px-8 py-4 bg-gold text-primary-foreground text-xs font-body tracking-[0.2em] uppercase hover:bg-gold-light transition-all duration-300"
             >
               Explore
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-            </a>
+            </button>
           </div>
         </div>
       </div>
