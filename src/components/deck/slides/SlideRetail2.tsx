@@ -1,12 +1,12 @@
-import aquarium from "@/assets/aquarium.jpg";
-import iceRink from "@/assets/ice-rink.jpg";
+import fountain from "@/assets/fountain.jpg";
+import ekart from "@/assets/ekart.jpg";
 
 const attractions = [
-  { image: aquarium, title: "Dubai Aquarium", tag: "Marine Life", stat: "300+", statLabel: "Species", desc: "The world's largest suspended aquarium tank with sharks, rays, and immersive underwater experiences." },
-  { image: iceRink, title: "Dubai Ice Rink", tag: "Sport & Leisure", stat: "1,500", statLabel: "Capacity", desc: "Olympic-standard ice rink hosting recreational skating and the Emirates Ice Hockey League." },
+  { image: fountain, title: "Dubai Fountain", tag: "Iconic Show", stat: "1,000", statLabel: "Water Expressions", desc: "Choreographed water shows with 25 color projectors — the world's largest performing fountain." },
+  { image: ekart, title: "Ekart Zabeel", tag: "Thrill", stat: "#1", statLabel: "Rooftop Karting", desc: "Award-winning rooftop go-karting experience with panoramic views of Downtown Dubai." },
 ];
 
-export default function SlideRetail({ active }: { active: boolean }) {
+export default function SlideRetail2({ active }: { active: boolean }) {
   return (
     <div className="w-full h-full flex flex-col">
       {/* Slide title */}
@@ -22,7 +22,7 @@ export default function SlideRetail({ active }: { active: boolean }) {
           Activities & Experiences
         </span>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-display leading-tight mt-2">
-          Where People Come to <span className="italic text-gold">Experience.</span>
+          Moments That <span className="italic text-gold">Move.</span>
         </h2>
       </div>
 
