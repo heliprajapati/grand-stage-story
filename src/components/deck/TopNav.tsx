@@ -1,16 +1,16 @@
 import { Monitor, MonitorOff } from "lucide-react";
 
 const sections = [
-  "Overview",
-  "Opportunity",
-  "Experiences",
-  "Retail",
-  "Luxury",
-  "Dining",
-  "Entertainment",
-  "Events",
-  "Partner",
-  "Contact",
+  { label: "Overview", slide: 0 },
+  { label: "Opportunity", slide: 1 },
+  { label: "Experiences", slide: 2 },
+  { label: "Activities", slide: 3 },
+  { label: "Luxury", slide: 5 },
+  { label: "Dining", slide: 6 },
+  { label: "Entertainment", slide: 7 },
+  { label: "Events", slide: 8 },
+  { label: "Partner", slide: 9 },
+  { label: "Contact", slide: 10 },
 ];
 
 interface TopNavProps {
@@ -26,29 +26,26 @@ export default function TopNav({ currentSlide, onGoTo, presentMode, onTogglePres
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="flex items-center justify-between h-14 px-6 lg:px-12">
-        {/* Logo */}
         <a className="font-display text-lg font-bold tracking-wide text-foreground shrink-0">
           <span className="text-gold">Dubai</span>Mall
         </a>
 
-        {/* Section Nav - hidden on small screens */}
         <div className="hidden lg:flex items-center gap-1">
-          {sections.map((s, i) => (
+          {sections.map((s) => (
             <button
-              key={s}
-              onClick={() => onGoTo(i)}
+              key={s.label}
+              onClick={() => onGoTo(s.slide)}
               className={`px-3 py-1.5 text-[10px] font-body tracking-[0.15em] uppercase transition-all duration-300 ${
-                currentSlide === i
+                currentSlide === s.slide || (s.label === "Activities" && currentSlide === 4)
                   ? "text-gold border-b-2 border-gold"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              {s}
+              {s.label}
             </button>
           ))}
         </div>
 
-        {/* Right controls */}
         <div className="flex items-center gap-3 shrink-0">
           <button
             onClick={onTogglePresent}

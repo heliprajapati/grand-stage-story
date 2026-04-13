@@ -5,6 +5,7 @@ import SlideHero from "./slides/SlideHero";
 import SlideOpportunity from "./slides/SlideOpportunity";
 import SlideExperiences from "./slides/SlideExperiences";
 import SlideRetail from "./slides/SlideRetail";
+import SlideRetail2 from "./slides/SlideRetail2";
 import SlideLuxury from "./slides/SlideLuxury";
 import SlideDining from "./slides/SlideDining";
 import SlideEntertainment from "./slides/SlideEntertainment";
@@ -13,7 +14,7 @@ import SlideCTA from "./slides/SlideCTA";
 import SlideContact from "./slides/SlideContact";
 import { useDeck } from "@/hooks/useDeck";
 
-const TOTAL_SLIDES = 10;
+const TOTAL_SLIDES = 11;
 
 export default function DeckLayout() {
   const { currentSlide, direction, presentMode, setPresentMode, goTo, next, prev } = useDeck({
@@ -34,12 +35,13 @@ export default function DeckLayout() {
         <SlideOpportunity active={currentSlide === 1} />
         <SlideExperiences active={currentSlide === 2} />
         <SlideRetail active={currentSlide === 3} />
-        <SlideLuxury active={currentSlide === 4} />
-        <SlideDining active={currentSlide === 5} />
-        <SlideEntertainment active={currentSlide === 6} />
-        <SlideEvents active={currentSlide === 7} />
-        <SlideCTA active={currentSlide === 8} />
-        <SlideContact active={currentSlide === 9} />
+        <SlideRetail2 active={currentSlide === 4} />
+        <SlideLuxury active={currentSlide === 5} />
+        <SlideDining active={currentSlide === 6} />
+        <SlideEntertainment active={currentSlide === 7} />
+        <SlideEvents active={currentSlide === 8} />
+        <SlideCTA active={currentSlide === 9} />
+        <SlideContact active={currentSlide === 10} />
       </SlideContainer>
 
       <BottomNav
@@ -51,7 +53,6 @@ export default function DeckLayout() {
         presentMode={presentMode}
       />
 
-      {/* Present mode exit hint */}
       {presentMode && (
         <button
           onClick={() => setPresentMode(false)}
