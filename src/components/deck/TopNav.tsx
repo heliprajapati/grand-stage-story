@@ -55,12 +55,6 @@ export default function TopNav({ currentSlide, onGoTo, presentMode, onTogglePres
             {presentMode ? <MonitorOff size={14} /> : <Monitor size={14} />}
             <span className="hidden sm:inline">Present</span>
           </button>
-          <a
-            href="#"
-            className="inline-flex items-center px-5 py-2 text-[10px] font-body tracking-[0.15em] uppercase bg-gold text-primary-foreground hover:bg-gold-light transition-colors duration-300"
-          >
-            Partner With Us
-          </a>
         </div>
       </div>
     </nav>
