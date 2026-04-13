@@ -22,7 +22,7 @@ export default function SlideRetail({ active }: { active: boolean }) {
           Activities & Experiences
         </span>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-display leading-tight mt-2">
-          Where People Come to <span className="italic text-gold">Experience.</span>
+          Attractions That <span className="italic text-gold">Captivate.</span>
         </h2>
       </div>
 
